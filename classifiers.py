@@ -282,7 +282,7 @@ class BestClassifier(ClassificationMethod):
         from sklearn import svm
 
         "*** YOUR CODE HERE ***"
-        self.sklearn_classifier = svm.SVC(C=15, gamma=0.025, decision_function_shape='ovo')
+        self.sklearn_classifier = svm.SVC(C=2, gamma=0.025, decision_function_shape='ovo', tol=0.015)
         self.sklearn_classifier.fit(trainingData, trainingLabels)
 
     def classify(self, data):
